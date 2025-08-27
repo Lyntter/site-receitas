@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap');
 /* Menu Topo */
-.imgw{
+.header-container{
   position: relative;
   width: 100vw;
   height: 41vh;
@@ -17,7 +18,7 @@
   .menutop{
     position: relative;
     font-family: "Montserrat", sans-serif;
-    z-index: 3;
+    z-index: 20;
     font-size: 2rem;
     display: flex;
     gap: 2rem;
@@ -33,6 +34,7 @@
   .dropdown {
     position: relative;
     display: inline-block;
+    z-index: 5;
   }
 
   .dropdown-content {
@@ -43,7 +45,7 @@
     min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     padding: 20px 20px;
-    z-index: 1;
+    z-index: 30;
     border-radius: 0.5rem;
     color: black;
     p{
@@ -53,6 +55,7 @@
 
   .dropdown:hover .dropdown-content {
     display: block;
+    z-index: 5;
   }
 
   .blackbox{
@@ -70,7 +73,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 3;
+    z-index: 20;
     padding-top: 0.8rem;
     padding-right: 0.8rem;
     button{
@@ -81,11 +84,101 @@
       border: none;
       cursor: pointer;
       padding: 0.5rem 2rem;
+      font-family: "Montserrat", sans-serif;
       &:hover {
         background-color: black;
         color: #f9f9f9;
+        transition: background-color 0.3s ease, color 0.3s ease;
       }
     }
   }
+  
+  .box-search {
+    position: absolute;
+    top: 1.5rem;
+    right: 11rem;
+    z-index: 10;
+    cursor: pointer;
+  }
+
+  .box-lanchearte {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    font-family: "Londrina Shadow", sans-serif;
+    font-size: 4rem;
+  }
+}
+
+.footer-container{
+  position: relative;
+  width: 100vw;
+  height: 30vh;
+  img { 
+    position: absolute;
+    width:100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+  .textdown {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    z-index: 20;
+    font-size: 1.5rem;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    p {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+ 
+    a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: aliceblue;
+      font-size: 1.5rem;
+      &:hover {
+        color: rgb(54, 64, 196);
+        transition: color 0.3s ease;
+      }
+    }
+  }
+
+
+
+  .blackbox{
+    position: absolute;
+    background-color: black;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
 }
 
